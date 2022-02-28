@@ -1,0 +1,158 @@
+/********************************************  
+ *  Styles for the Background Switcher.     *
+ *  Author: Nikos-Nikitas                   *
+ *  Github: https://github.com/nikosnikitas *
+ ********************************************/
+
+:root {
+    --lpink: lightpink;
+    --lsgreen: lightseagreen;
+    --main: lightgray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+header {
+    background-color: #000;
+    color: var(--lsgreen);
+    width: 100%;
+    align-self: flex-start;
+    vertical-align: top;
+    border: solid #000 1px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#right { align-self: start; padding: 10px;}
+#right a {color: var(--main); text-decoration: none;}
+#right:hover a { color: lightyellow; animation: grow 3s both;}
+#left { align-self: end; padding: 10px;}
+
+
+svg {
+    align-self: center;
+    padding: 3px;
+}
+#shape {
+    fill: var(--lpink);
+    stroke: var(--lsgreen);
+    animation-name: switch;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes switch {
+    0% {
+        fill: var(--lpink);
+        stroke: var(--lsgreen);
+    }
+    50% {
+        fill: var(--lsgreen);
+        stroke: var(--lpink);
+    }
+
+    100% {
+        fill: var(--lpink);
+        stroke: var(--lsgreen);
+    }
+}
+
+@keyframes grow {
+    from {
+        font-size: inherit;
+    }
+
+     to {
+         font-size: xx-large;
+     }
+}
+
+ #App {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border: solid inherit 1px;
+    border-radius: 25px;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--main);
+}
+#App, p {width: 100%;}
+
+.container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border: solid inherit 1px;
+    border-radius: 25px;
+    width: 80%; 
+    height: 100vh;
+    background-color: transparent;
+    box-shadow: inset 2px 2px 4px 2px gray;
+}
+
+button {
+    width: 200px; 
+    height: 100px;
+    background-color: #000;
+    color: var(--lsgreen);
+    border: solid 3px var(--lsgreen);
+    border-radius: inherit;
+    box-shadow: 2px 3px 4px 2px gray;
+    cursor: pointer;
+    padding: 6px;
+}
+
+button:hover {
+    animation: grow 2s both;
+}
+
+p {
+    transform: translateY(-50vh);
+    height: 10vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border: solid inherit 1px;
+    border-radius: 25px;
+    text-align: center;
+    color: var(--lsgreen); 
+    background-color: #000;
+}
+
+footer {
+    background-color: #000;
+    color: var(--lsgreen);
+    width: 100%;
+    align-self: flex-end;
+    vertical-align: top;
+    border: solid #000 1px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
