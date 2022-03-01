@@ -109,7 +109,8 @@ body {
     border-radius: 25px;
     width: 80%; 
     height: 100vh;
-    background-color: transparent;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.205));
+    backdrop-filter: blur(30%);
     box-shadow: inset 2px 2px 4px 2px gray;
 }
 
