@@ -33,7 +33,7 @@ document.getElementById('App').addEventListener( 'load', makeUI());
         let randInt = getRandomNum(0, colors.length);
         let color = colors[randInt];
 
-        bg.setAttribute('style', 'background-color: '+ color +';');
+        bg.setAttribute('style', `background: linear-gradient(transparent, ${color});`);
         
         const p = document.querySelector('p');
         p.innerText = 'Color: ' + color;
